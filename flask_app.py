@@ -33,9 +33,9 @@ input_data = [
 # Convert to a 2D array (1 sample, n features)
 gender = {'Female': 0, 'Male': 1}
 bmi_category = {'Normal': 0, 'Normal Weight': 1, 'Obese': 2, 'Overweight': 3}
-original_occupations = ['Accountant','Doctor','Engineer','Lawyer','Nurse','Salesperson','Teacher']
+original_occupations = ['Accountant','Doctor','Engineer','Lawyer','Manager','Nurse','Sales Representative','Salesperson','Scientist','Software Engineer','Teacher']
 
-occupation_columns = ['Occupation_Accountant','Occupation_Doctor','Occupation_Engineer','Occupation_Lawyer','Occupation_Nurse','Occupation_Salesperson','Occupation_Teacher']
+occupation_columns = ['Occupation_Accountant','Occupation_Doctor','Occupation_Engineer','Occupation_Lawyer', 'Occupation_Manager', 'Occupation_Nurse','Occupation_Sales Representative', 'Occupation_Salesperson','Occupation_Scientist','Occupation_Software Engineer','Occupation_Teacher']
 def pre_process(X):
   X[['Systolic','Diastolic']] = X['Blood Pressure'].str.split('/',expand=True).apply(pd.to_numeric, errors='coerce')
   # X = pd.get_dummies(X,columns=["Occupation"],prefix="Occupation")
