@@ -57,7 +57,7 @@ def pre_process(X):
   X[numerical_features] = scaler.transform(X[numerical_features])
   return X
   
-with open('SVM_Optimised_model.pkl', 'rb') as f:
+with open('SVM_Optimised_model_2.pkl', 'rb') as f:
   model = pickle.load(f)
 
 
@@ -71,7 +71,7 @@ def GetPrediction():
   # print(df)
   df = pre_process(df)
   
-  with open('SVM_Optimised_model.pkl', 'rb') as f:
+  with open('SVM_Optimised_model_2.pkl', 'rb') as f:
     model = pickle.load(f)
   print(df.columns)
   pred = model.predict(df)
